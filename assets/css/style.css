@@ -1,0 +1,3437 @@
+/*----------
+
+Template Name: Anaya - Construction & Business HTML5 Template
+Template Version: 1.0
+
+----------*/
+
+
+/*====================
+<-----Index----->
+1.Common CSS
+2.Loader CSS
+3.Sidebar Menu CSS
+4.Header CSS
+5.Main Banner CSS
+6.About Us CSS
+7.Counter CSS
+8.Our Services CSS
+9.Quote CSS
+10.Core Features CSS
+11.Our Projects CSS
+12.Our Team CSS
+13.Pricing Plan CSS
+14.Testimonial CSS
+15.Blog CSS
+16.Clinet CSS
+17.Contact Us CSS
+18.Footer CSS
+19.Scroll To Top CSS
+20.Responsive CSS
+====================*/
+
+
+/*==============================
+    Common CSS Start
+==============================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--body-color);
+    font-size: 16px;
+    font-family: var(--body-font);
+    color: #777;
+}
+/* Floating WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  left: 80px;
+}
+
+/* Floating Calling Button */
+.call-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Adjust the position as needed */
+}
+
+/* Style for the buttons */
+.whatsapp-button img,
+.call-button img {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #25D366; /* WhatsApp color */
+  background-color: #25D366;
+  display: block;
+}
+
+/* Centering the icon in the circle */
+.whatsapp-button a,
+.call-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+body.fixed {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+input,
+input:focus,
+button,
+button:focus {
+    outline: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: none;
+}
+
+dl,
+ol,
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:root {
+    --primary-color: #ff5e28;
+    --dark-color: #25262a;
+    --white-color: #ffffff;
+    --body-color: #f4f8fb;
+    --box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    --common-box-shadow: 0px 0px 50px 0px rgba(7, 14, 39, 0.1);
+    --transition: all ease .5s;
+    --body-font: 'Roboto', sans-serif;
+    --title-font: 'Asap', sans-serif;
+}
+
+.wow {
+    visibility: hidden;
+}
+
+a:hover {
+    color: initial;
+}
+
+.for-des {
+    display: block !important;
+}
+
+.for-mob {
+    display: none !important;
+}
+
+.sec-wp {
+    position: relative;
+    z-index: 4;
+}
+
+.custom-logo-link {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 12px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: var(--title-font);
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.h1-title {
+    font-size: 65px;
+    line-height: 75px;
+    margin-bottom: 24px;
+    color: var(--white-color);
+}
+
+.h2-title {
+    font-size: 36px;
+    color: var(--dark-color);
+    line-height: 46px;
+    margin-bottom: 26px;
+    position: relative;
+}
+
+.h3-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.h4-title {
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 19px;
+    letter-spacing: 5px;
+}
+
+.h4-title span {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 24px;
+    padding: 2px 0 2px 5px;
+    margin-right: 2px;
+}
+
+.form-input {
+    width: 100%;
+    height: 46px;
+    border: 1px solid var(--dark-color);
+    outline: none !important;
+    padding: 0 30px;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    color: var(--dark-color);
+    line-height: 30px;
+    font-size: 16px;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+textarea.form-input {
+    height: 118px;
+    resize: none;
+    padding: 21px 30px;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select.form-input {
+    padding: 0 45px 0 30px;
+}
+
+.form-input:valid {
+    border: 2px solid #008000;
+}
+
+.form-element {
+    position: relative;
+}
+
+.form-element i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    color: var(--dark-color);
+}
+
+.form-control-wrap {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.form-control-wrap.message {
+    margin-bottom: 23px;
+}
+
+.form-input::-webkit-input-placeholder {
+    color: var(--dark-color);
+    opacity: 1;
+}
+
+.form-input::-moz-placeholder {
+    color: var(--dark-color);
+    opacity: 1;
+}
+
+.form-input:-ms-input-placeholder {
+    color: var(--dark-color);
+    opacity: 1;
+}
+
+.form-input::-ms-input-placeholder {
+    color: var(--dark-color);
+    opacity: 1;
+}
+
+.form-input::placeholder {
+    color: var(--dark-color);
+    opacity: 1;
+}
+
+.submit-btn {
+    text-align: left;
+}
+
+.sec-btn,
+.lg-btn,
+.outline-btn {
+    min-width: 170px;
+    min-height: 46px;
+    background-color: var(--primary-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-appearance: none;
+    font-size: 16px;
+    color: var(--white-color);
+    text-transform: capitalize;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    outline: none !important;
+    transition: var(--transition);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.sec-btn:hover,
+.sec-btn.white-btn:hover {
+    background-color: var(--dark-color);
+    border-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+.sec-btn i {
+    margin-left: 10px;
+}
+
+.sec-btn.white-btn {
+    background-color: var(--white-color);
+    border-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.outline-btn.sec-btn {
+    background-color: transparent;
+    border-color: var(--white-color);
+    color: var(--white-color);
+}
+
+.outline-btn.sec-btn:hover {
+    border-color: var(--dark-color);
+    background-color: var(--dark-color);
+}
+
+.lg-btn.sec-btn {
+    min-width: 220px;
+    min-height: 56px;
+}
+
+.overflow-text {
+    height: 120px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar,
+.overflow-text::-webkit-scrollbar {
+    width: 3px;
+    background-color: var(--dark-color);
+}
+
+::-webkit-scrollbar-thumb,
+.overflow-text::-webkit-scrollbar-thumb {
+    width: 3px;
+    background-color: var(--primary-color);
+}
+
+.overflow-text::-webkit-scrollbar-thumb {
+    height: 50px;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 100px;
+}
+
+.back-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 100px;
+    height: 46px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    outline: none;
+    border: 0;
+    transition: var(--transition);
+}
+
+.swiper-button-next {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    right: 0;
+}
+
+.swiper-button-next:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.swiper-button-prev:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.swiper-button-prev:hover::after {
+    color: var(--primary-color);
+}
+
+.swiper-button-next:hover::after {
+    color: var(--white-color);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: "\f30a";
+    color: var(--white-color);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    transition: var(--transition);
+}
+
+.swiper-button-next::after {
+    content: "\f30b";
+    color: var(--primary-color);
+    left: auto;
+    right: 20px;
+}
+
+.swiper-button-prev span {
+    transform: translateX(12px);
+}
+
+.swiper-button-next span {
+    transform: translateX(-12px);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 7px;
+}
+
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    border-radius: 0%;
+    outline: none;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:first-child {
+    margin-left: 0;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
+    margin-right: 0;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
+}
+
+.listbox ul {
+    display: inline-block;
+}
+
+.listbox li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 25px;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.listbox li::before {
+    content: "\f00c";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listbox li:hover::before {
+    background: var(--dark-color);
+}
+
+.area-text {
+    margin-bottom: 17px;
+}
+
+.social-link li {
+    display: inline-block;
+    margin: 0 7px;
+}
+
+.social-link li:first-child {
+    margin-left: 0;
+}
+
+.social-link li:last-child {
+    margin-right: 0;
+}
+
+.social-link li a {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.social-link li a:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.white-text p,
+.white-text h1,
+.white-text h2,
+.white-text h3,
+.white-text h4,
+.white-text h5,
+.white-text h6,
+.white-text span {
+    color: var(--white-color);
+}
+
+mark {
+    color: var(--white-color);
+    background: 0 0;
+    padding: 0 5px;
+    background-image: linear-gradient(var(--primary-color), var(--primary-color));
+    background-repeat: no-repeat;
+    background-size: 100% 20px;
+    background-position: 0 45px;
+    position: relative;
+}
+
+.about-us-sec::before,
+.about-us-sec::after,
+.our-services::before,
+.core-features-sec::after,
+.our-projects::after,
+.our-team::after,
+.testimonial-sec::before,
+.testimonial-sec::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 100px;
+    background-color: var(--primary-color);
+    top: 100px;
+    left: 0;
+}
+
+.about-us-sec::after {
+    background-color: var(--dark-color);
+    top: auto;
+    bottom: 100px;
+    left: auto;
+    right: 0;
+}
+
+
+/*==============================
+    Common CSS End
+==============================*/
+
+
+/*==============================
+    Loader CSS Start
+==============================*/
+
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: 0.3s linear;
+}
+
+.loading {
+    width: 40px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    color: var(--white-color);
+    left: -100px;
+    -webkit-animation: shadowRolling 2s linear infinite;
+    animation: shadowRolling 2s linear infinite;
+}
+
+@-webkit-keyframes shadowRolling {
+    0% {
+        box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+    12% {
+        box-shadow: 100px 0 var(--primary-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+    25% {
+        box-shadow: 110px 0 var(--primary-color), 100px 0 var(--primary-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+    36% {
+        box-shadow: 120px 0 var(--primary-color), 110px 0 var(--primary-color), 100px 0 var(--primary-color), 0px 0 rgba(255, 255, 255, 0);
+    }
+    50% {
+        box-shadow: 130px 0 var(--primary-color), 120px 0 var(--primary-color), 110px 0 var(--primary-color), 100px 0 var(--primary-color);
+    }
+    62% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--white-color), 120px 0 var(--white-color), 110px 0 var(--white-color);
+    }
+    75% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--white-color), 120px 0 var(--white-color);
+    }
+    87% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--white-color);
+    }
+    100% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes shadowRolling {
+    0% {
+        box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+    12% {
+        box-shadow: 100px 0 var(--primary-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+    25% {
+        box-shadow: 110px 0 var(--primary-color), 100px 0 var(--primary-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+    36% {
+        box-shadow: 120px 0 var(--primary-color), 110px 0 var(--primary-color), 100px 0 var(--primary-color), 0px 0 rgba(255, 255, 255, 0);
+    }
+    50% {
+        box-shadow: 130px 0 var(--primary-color), 120px 0 var(--primary-color), 110px 0 var(--primary-color), 100px 0 var(--primary-color);
+    }
+    62% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--white-color), 120px 0 var(--white-color), 110px 0 var(--white-color);
+    }
+    75% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--white-color), 120px 0 var(--white-color);
+    }
+    87% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--white-color);
+    }
+    100% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+    }
+}
+
+
+/*==============================
+    Loader CSS End
+==============================*/
+
+
+/*==============================
+    Sidebar Menu CSS Start
+==============================*/
+
+.sidebar-menu-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    transform: scaleX(0);
+    transform-origin: center left;
+    transition: all .6s cubic-bezier(.77, 0, .175, 1);
+    cursor: url('../images/cursor-crosshair.svg'), pointer;
+    z-index: 99;
+}
+
+.sidebar-menu.toggle-menu .sidebar-menu-overlay {
+    transform: scaleX(1);
+}
+
+.site-menu-btn {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.site-menu-btn span {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: var(--dark-color);
+    margin-bottom: 12px;
+    transition: .3s;
+}
+
+.site-menu-btn span:last-child {
+    margin-bottom: 0;
+}
+
+.site-menu-btn span:nth-child(2) {
+    width: 30px;
+}
+
+.site-menu-btn:hover span:nth-child(2) {
+    width: 40px;
+}
+
+.sidebar-menu-box {
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    transform: translateX(110%);
+    overflow-y: auto;
+    background-color: #17172f;
+    padding: 150px 40px 40px;
+    z-index: 100;
+    backface-visibility: hidden;
+    will-change: transform;
+    transition: all .6s cubic-bezier(.77, 0, .175, 1);
+}
+
+.sidebar-menu.toggle-menu .sidebar-menu-box {
+    transform: translateX(0);
+}
+
+.sidebar-menu-close-btn {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    outline: none;
+    border: 0;
+    padding: 10px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 30px;
+    right: 0;
+    transition: var(--transition);
+    z-index: 1;
+}
+
+.sidebar-menu-close-btn span {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--white-color);
+    transition: var(--transition);
+}
+
+.sidebar-menu-close-btn:hover {
+    background-color: var(--white-color);
+}
+
+.sidebar-menu-close-btn:hover span {
+    background-color: var(--primary-color);
+}
+
+.sidebar-menu-close-btn span:first-child {
+    transform: rotate(50deg);
+}
+
+.sidebar-menu-close-btn:hover span:first-child {
+    transform: rotate(180deg);
+}
+
+.sidebar-menu-close-btn span:last-child {
+    transform: rotate(-50deg);
+}
+
+.sidebar-menu-close-btn:hover span:last-child {
+    transform: rotate(0deg);
+}
+
+.sidebar-menu-inner {
+    position: relative;
+}
+
+.sidebar-menu-inner .logo {
+    text-align: center;
+    margin-bottom: 23px;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-left: -2rem;
+}
+
+.sidebar-menu-inner .contact-us-link .h3-title {
+    margin-bottom: 22px;
+    text-decoration: underline;
+}
+
+.sidebar-menu-inner .social-link .h3-title {
+    margin-bottom: 27px;
+    text-decoration: underline;
+}
+
+.sidebar-menu-inner .contact-us-link li a span,
+.area-text p {
+    color: #9ca5af;
+}
+
+.sidebar-menu-inner .contact-us-link li a:hover span {
+    text-decoration: underline;
+}
+
+.sidebar-menu-inner .contact-us-link li a {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-menu-inner .contact-us-link li {
+    margin-bottom: 23px;
+}
+
+.sidebar-menu-inner .contact-us-link li:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-menu-inner .contact-us-link li a i {
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-size: 22px;
+}
+
+.sidebar-menu-inner .contact-us-link {
+    margin-bottom: 20px;
+}
+
+
+/*==============================
+    Sidebar Menu CSS End
+==============================*/
+
+
+/*==============================
+    Header CSS Start
+==============================*/
+
+.site-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transition: var(--transition);
+}
+
+.sticky-head {
+    background-color: #F5F3EF;
+    box-shadow: var(--box-shadow);
+}
+
+.header-wp {
+    background-color: #f5f3ef;
+    padding: 15px 30px;
+    margin-top: 20px;
+    transition: var(--transition);
+}
+
+.sticky-head .header-wp {
+    margin-top: 0;
+    padding: 15px 0;
+}
+
+.header-main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.main-navigation {
+    margin-right: 36px;
+}
+
+.main-navigation li {
+    float: left;
+    margin: 0 18px;
+}
+
+.main-navigation li:first-child {
+    margin-left: 0;
+}
+
+.main-navigation li:last-child {
+    margin-right: 0;
+}
+
+.main-navigation li a {
+    display: flex;
+    height: 100%;
+    transition: var(--transition);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-color);
+    text-transform: capitalize;
+    border-bottom: 3px solid transparent;
+    z-index: 1;
+}
+
+.main-navigation li:hover>a {
+    color: var(--primary-color);
+    -webkit-text-stroke: 1px;
+    border-bottom-color: var(--primary-color);
+}
+
+.sticky-head .main-navigation li a.active-menu,
+.main-navigation li a.active-menu {
+    border-bottom-color: var(--primary-color);
+    color: var(--primary-color);
+    -webkit-text-stroke: 1px;
+}
+
+
+/*==============================
+    Header CSS End
+==============================*/
+
+
+/*==============================
+    Main Banner CSS Start
+==============================*/
+
+.main-banner {
+    position: relative;
+}
+
+.swiper-image {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    transform: scale(1);
+    backface-visibility: hidden !important;
+    transition: 8s;
+    transition-delay: 0.4s;
+}
+
+.swiper-image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+}
+
+.slide-item {
+    position: relative;
+    height: 100vh;
+}
+
+.bannerSwiper {
+    height: 100vh;
+}
+
+.swiper-slide {
+    margin: 0;
+    overflow: hidden !important;
+}
+
+.swiper-slide-active .swiper-image {
+    transform: scale(1.1);
+}
+
+.swiper-slide .content-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-top: 27px;
+}
+
+.banner-text-wp {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 17px 0 30px;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.banner-text-wp::before,
+.banner-text-wp::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background-color: var(--primary-color);
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+}
+
+.banner-text-wp::after {
+    top: auto;
+    left: auto;
+    bottom: 0;
+    right: 0;
+}
+
+.banner-text-wp .h1-title {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transform: translateX(-80px);
+    transition: 1s;
+    opacity: 0;
+    transition-delay: 0.4s;
+}
+
+.banner-text-wp p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 24px;
+    text-transform: capitalize;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transform: translateX(-100px);
+    margin-bottom: 24px;
+    transition: 1s;
+    transition-delay: 0.5s;
+    opacity: 0;
+}
+
+.banner-text-wp .banner-btn {
+    transform: translateX(-120px);
+    transition: 1s;
+    transition-delay: 0.6s;
+    opacity: 0;
+}
+
+.swiper-slide-active .banner-text-wp .h1-title,
+.swiper-slide-active .banner-text-wp p,
+.swiper-slide-active .banner-text-wp .banner-btn {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.bannerSwiper .swiper-pagination-bullet {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--white-color);
+    background: transparent;
+    opacity: 0.5;
+    transition: var(--transition);
+}
+
+.bannerSwiper .swiper-pagination-bullet:hover::before {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.bannerSwiper .swiper-pagination-bullet::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--white-color);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: var(--transition);
+}
+
+.bannerSwiper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.bannerSwiper .swiper-pagination-bullet:hover {
+    opacity: 1;
+}
+
+.bannerSwiper .swiper-pagination-bullet-active::before {
+    transform: scale(1.2);
+}
+
+.bannerSwiper .swiper-pagination {
+    text-align: left;
+    color: var(--white-color);
+    font-size: 30px;
+}
+
+.bannerSwiper .swiper-pagination .swiper-pagination-current {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bannerSwiper .swiper-pagination-fraction {
+    bottom: 30px;
+    left: 0;
+    text-align: center;
+}
+
+.follow-us {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translate(0, -50%);
+    z-index: 2;
+}
+
+.follow-us h3 {
+    position: relative;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    writing-mode: vertical-lr;
+    color: var(--white-color);
+}
+
+.follow-us h3::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 100px;
+    background: var(--white-color);
+    margin: 30px 0;
+}
+
+.social li {
+    display: block;
+    margin: 15px 0;
+}
+
+.social li:first-child {
+    margin-top: 0;
+}
+
+.social li:last-child {
+    margin-bottom: 0;
+}
+
+.social li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 30px;
+    min-height: 30px;
+    color: var(--white-color);
+    transition: var(--transition);
+}
+
+.social li a:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+/*==============================
+    Main Banner CSS End
+==============================*/
+
+
+/*==============================
+    About Us CSS Start
+==============================*/
+
+.about-us-sec {
+    position: relative;
+    padding: 100px 0 63px;
+    background-color: var(--white-color);
+}
+
+.about-text {
+    margin-bottom: 20px;
+}
+
+.about-text h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+}
+
+.about-text h3 img {
+    width: 50px;
+    margin-right: 25px;
+}
+
+.about-list.listbox {
+    margin-bottom: 6px;
+}
+
+.about-list.listbox li {
+    float: left;
+    width: 50%;
+}
+
+.about-img-1 {
+    height: 450px;
+    position: relative;
+    border: 30px solid var(--white-color);
+    border-left: 0;
+    border-bottom: 0;
+    z-index: 1;
+}
+
+.about-img-2 {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    top: -60px;
+    right: -60px;
+    box-shadow: var(--box-shadow);
+}
+
+.about-box {
+    position: absolute;
+    background-color: var(--primary-color);
+    box-shadow: var(--box-shadow);
+    top: -15px;
+    right: -15px;
+    padding: 10px 30px 16px;
+}
+
+.about-box li {
+    color: var(--white-color);
+    text-transform: capitalize;
+}
+
+.about-box li span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/*==============================
+    About Us CSS End
+==============================*/
+
+
+/*==============================
+    Counter CSS Start
+==============================*/
+
+.counter-sec {
+    position: relative;
+    padding: 70px 0;
+    background-attachment: fixed;
+}
+
+.counter-sec::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+}
+
+.counter-sec .h2-title {
+    margin-bottom: 20px;
+}
+
+.counter-box-wp {
+    position: relative;
+
+}
+
+.counter-box-wp::before {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 50%;
+    border: 25px solid var(--primary-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.counter-box {
+    position: relative;
+    background-color: var(--white-color);
+    text-align: center;
+    margin-block: 30px;
+    padding: 7px 0 26px;
+    border: 5px solid var(--primary-color);
+}
+
+.counter-box .odometer {
+    color: var(--primary-color);
+    font-size: 45px;
+    font-weight: bold;
+    position: relative;
+}
+
+.counter-box .odometer::before {
+    content: "+";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    top: 10px;
+    right: -35px;
+    font-size: 27px;
+}
+
+.counter-box p {
+    font-size: 22px;
+    color: var(--dark-color);
+}
+
+
+/*==============================
+    Counter CSS End
+==============================*/
+
+
+/*==============================
+    Our Services CSS Start
+==============================*/
+
+.our-services {
+    position: relative;
+    padding: 100px 0 20px;
+}
+
+.our-services::before {
+    background-color: var(--dark-color);
+}
+
+.our-services .sec-title {
+    margin-bottom: 69px;
+}
+
+.our-services .service-shep {
+    width: 500px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.service-box-wp {
+    position: relative;
+    margin-bottom: 80px;
+    padding: 0 30px 23px;
+    background-color: var(--white-color);
+    border: 2px solid #e6e4e4;
+    transition: var(--transition);
+}
+
+.service-box-wp:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 0 0 rgba(0, 0, 0, 0.12);
+}
+
+.service-icon img {
+    position: relative;
+    width: 70px;
+}
+
+.service-icon {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -50px auto 23px;
+    border: 2px solid #e6e4e4;
+    background-color: var(--white-color);
+    transition: var(--transition);
+}
+
+.service-icon::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background-color: #f2f3f5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.service-text .h3-title {
+    color: var(--primary-color);
+    margin-bottom: 14px;
+}
+
+.serviceSwiper .swiper-slide {
+    padding-top: 30px;
+}
+
+
+/*==============================
+    Our Services CSS End
+==============================*/
+
+
+/*==============================
+    Quote CSS Start
+==============================*/
+
+.quote-sec {
+    background-color: var(--primary-color);
+    padding: 60px 0;
+}
+
+.quote-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quote-title span {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 9px;
+    text-transform: capitalize;
+}
+
+
+/*==============================
+    Quote CSS End
+==============================*/
+
+
+/*==============================
+    Core Features CSS Start
+==============================*/
+
+.core-features-sec {
+    position: relative;
+    padding: 100px 0 100px;
+}
+
+.core-features-sec::after {
+    left: auto;
+    right: 0;
+}
+
+.core-features-sec .jcb-machine {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0.1;
+    pointer-events: none;
+    width: 550px;
+}
+
+.feature-content-wp .h2-title {
+    margin-bottom: 20px;
+}
+
+.feature-content-wp {
+    position: relative;
+    background-color: var(--body-color);
+    padding: 30px 30px 30px 0;
+    margin: 100px 0;
+}
+
+.feature-list .h3-title {
+    margin-bottom: 10px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.feature-list li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.feature-list li .icon {
+    min-width: 100px;
+    min-height: 100px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    transition: var(--transition);
+}
+
+.feature-list li:hover .icon {
+    border-color: var(--primary-color);
+}
+
+.feature-list li .icon img {
+    width: 70px;
+}
+
+.feature-img-wp {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -2;
+}
+
+.feature-single-img {
+    width: 700px;
+    height: 100%;
+    float: right;
+    display: block;
+}
+
+
+/*==============================
+    Core Features CSS End
+==============================*/
+
+
+/*==============================
+    Our Projects CSS Start
+==============================*/
+
+.our-projects {
+    position: relative;
+    padding: 100px 0 70px;
+    background-attachment: fixed;
+}
+
+.our-projects::after {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+    right: auto;
+    left: 0;
+    height: 300px;
+}
+
+.our-projects::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #eef1f2;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+.project-box-wp {
+    margin-bottom: 30px;
+}
+
+.project-img-wp {
+    overflow: hidden;
+}
+
+.project-img {
+    height: 350px;
+    transition: var(--transition);
+}
+
+.project-box-wp:hover .project-img {
+    transform: scale(1.3);
+}
+
+.project-content {
+    position: relative;
+    background-color: var(--white-color);
+    margin: -90px 15px 0;
+    padding: 30px 30px 25px;
+    border-top: 5px solid var(--primary-color);
+}
+
+.project-content .h3-title {
+    position: relative;
+    display: inline-block;
+}
+
+.project-box-wp:hover .h3-title {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.project-content .title {
+    background-color: #f2f3f5;
+    padding: 8px 15px;
+    color: var(--primary-color);
+    display: inline-block;
+    margin-bottom: 23px;
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+
+.project-box-wp:hover .title {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.project-content .project-location {
+    display: flex;
+    align-items: flex-start;
+}
+
+.project-location i {
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+
+/*==============================
+    Our Project CSS End
+==============================*/
+
+
+/*==============================
+    Our Team CSS Start
+==============================*/
+
+.our-team {
+    position: relative;
+    padding: 100px 0 83px;
+}
+
+.team-building-shep {
+    position: absolute;
+    bottom: 0;
+    left: -150px;
+    opacity: 0.2;
+}
+
+.our-team::after {
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--dark-color);
+    left: auto;
+    right: 0;
+    height: 300px;
+}
+
+.our-team .h4-title {
+    margin-bottom: 18px;
+}
+
+.our-team .h2-title {
+    margin-bottom: 20px;
+}
+
+.team-box {
+    overflow: hidden;
+    position: relative;
+}
+
+.team-img-wp a:hover {
+    cursor: url('../images/cursor-crosshair-slider.svg'), pointer;
+}
+
+.team-img {
+    height: 500px;
+    transition: var(--transition);
+}
+
+.team-box:hover .team-img {
+    transform: scale(1.3);
+}
+
+.teamSwiper .swiper-slide-visible.swiper-slide-prev:hover .team-box .team-img,
+.teamSwiper .swiper-slide-visible.swiper-slide-next:hover .team-box .team-img {
+    transform: scale(1);
+}
+
+.team-content-wp {
+    position: absolute;
+    background-color: var(--primary-color);
+    text-align: center;
+    width: 100%;
+    bottom: -100%;
+    left: 0;
+    padding: 25px 0 30px;
+    transition: var(--transition);
+}
+
+.team-box:hover .team-content-wp {
+    bottom: 0;
+}
+
+.teamSwiper .swiper-slide-visible.swiper-slide-prev:hover .team-box .team-content-wp,
+.teamSwiper .swiper-slide-visible.swiper-slide-next:hover .team-box .team-content-wp {
+    bottom: -100%;
+}
+
+.team-content {
+    position: relative;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+.team-content h3 {
+    font-size: 24px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.team-content span {
+    text-transform: capitalize;
+}
+
+.team-content-wp ul.social-team {
+    display: flex;
+    justify-content: center;
+    margin-top: 23px;
+}
+
+.team-content-wp ul.social-team li {
+    margin: 0 6px;
+}
+
+.team-content-wp ul.social-team li:first-child {
+    margin-left: 0;
+}
+
+.team-content-wp ul.social-team li:last-child {
+    margin-right: 0;
+}
+
+.team-content-wp .social-team li a {
+    color: var(--dark-color);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-color);
+}
+
+.team-content-wp .social-team li a:hover {
+    background-color: var(--dark-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.team-box:hover .team-content-wp {
+    cursor: auto;
+}
+
+.teamSwiper .swiper-wrapper {
+    padding: 0 0 62px;
+}
+
+
+/*==============================
+    Our Team CSS End
+==============================*/
+
+
+/*==============================
+    Pricing Plan CSS Start
+==============================*/
+
+.pricing-sec {
+    position: relative;
+    padding: 100px 0;
+}
+
+.pricing-sec .h2-title {
+    margin-bottom: 28px;
+}
+
+.pricing-back-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+}
+
+.pricing-back-img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+}
+
+.pricing-switch ul {
+    list-style: none;
+    margin-bottom: 0;
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid var(--primary-color);
+}
+
+.pricing-switch {
+    margin-bottom: 30px;
+}
+
+.pricing-switch ul li {
+    display: inline-block;
+}
+
+.pricing-switch li a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    padding: 5px 25px;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--white-color);
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+
+.pricing-switch li a.active,
+.pricing-switch li a.active:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pricing-switch li a:hover {
+    color: var(--primary-color);
+}
+
+.pricing-item {
+    position: relative;
+    top: 0;
+    transition: var(--transition);
+}
+
+.pricing-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.20);
+}
+
+.pricing-item .pricing-text {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.pricing-item .title-box {
+    background-color: #768BA2;
+    padding: 15px 0;
+    color: var(--white-color);
+    font-size: 26px;
+}
+
+.pricing-item .pricing-text h3 {
+    font-size: 60px;
+}
+
+.pricing-item .pricing-bottom {
+    background-color: var(--white-color);
+    padding-top: 20px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.pricing-item .pricing-bottom-text ul {
+    margin-bottom: 30px;
+    padding: 0 30px;
+}
+
+.pricing-item .pricing-bottom-text li {
+    position: relative;
+    padding: 15px 30px 15px 60px;
+}
+
+.pricing-item .pricing-bottom-text li:nth-child(odd) {
+    background-color: #f2f3f5;
+}
+
+.pricing-item .pricing-bottom-text li::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 20px;
+    background-image: url('../images/true-color-icon.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.pricing-item .pricing-bottom-text li:nth-child(3)::before,
+.pricing-item .pricing-bottom-text li:nth-child(4)::before,
+.pricing-item .pricing-bottom-text li:nth-child(5)::before {
+    background-image: url('../images/false-color-icon.svg');
+}
+
+.standard-plan .pricing-bottom-text li:nth-child(3)::before,
+.standard-plan .pricing-bottom-text li:nth-child(4)::before,
+.premium-plan .pricing-bottom-text li:nth-child(3)::before,
+.premium-plan .pricing-bottom-text li:nth-child(4)::before,
+.premium-plan .pricing-bottom-text li:nth-child(5)::before {
+    background-image: url('../images/true-color-icon.svg');
+}
+
+.pricing-item .pricing-text .text-border.yearly_text {
+    display: none;
+}
+
+.pricing-btn .sec-btn {
+    min-width: 100%;
+}
+
+
+/*==============================
+    Pricing Plan CSS End
+==============================*/
+
+
+/*==============================
+    Testimonial CSS Start
+==============================*/
+
+.testimonial-sec {
+    position: relative;
+    padding: 0 0 83px;
+}
+
+.testimonial-sec::before {
+    top: 0;
+    height: 300px;
+    background-color: var(--dark-color);
+}
+
+.testimonial-sec::after {
+    top: auto;
+    left: auto;
+    bottom: 0;
+    right: 0;
+    height: 300px;
+}
+
+.testimonial-sec .h2-title {
+    margin-bottom: 21px;
+}
+
+.testimonial-text {
+    border: 1px solid var(--primary-color);
+    position: relative;
+    background-color: var(--white-color);
+    padding: 52px 30px 72px;
+}
+
+.testimonial-text .icon {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    background-color: var(--white-color);
+}
+
+.testimonial-text .icon::before {
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    background-color: #f2f3f5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.testimonial-text .icon img {
+    position: relative;
+}
+
+.testimonial-text .overflow-text {
+    height: 90px;
+}
+
+.testimonial-author {
+    margin-top: -50px;
+    position: relative;
+}
+
+.testimonial-author .img-box-wp {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 26px;
+    padding: 10px;
+    background-color: var(--white-color);
+    border: 1px solid var(--primary-color);
+}
+
+.testimonial-author .img-box {
+    height: 100%;
+}
+
+.testimonial-author h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+}
+
+.testimonial-author span {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.testimonial-author .review-wp {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-author .review-wp li {
+    color: var(--primary-color);
+    margin: 0 5px;
+}
+
+.testimonial-author .review-wp li:first-child {
+    margin-left: 0;
+}
+
+.testimonial-author .review-wp li:last-child {
+    margin-right: 0;
+}
+
+.testimonialSwiper .swiper-slide {
+    padding-top: 35px;
+}
+
+.testimonialSwiper:hover .testimonial-text {
+    cursor: url('../images/cursor-dark-crosshair-slider.svg'), pointer;
+}
+
+.testimonialSwiper .swiper-pagination {
+    cursor: auto;
+}
+
+.testimonialSwiper .swiper-wrapper {
+    padding-bottom: 57px;
+}
+
+
+/*==============================
+    Testimonial CSS End
+==============================*/
+
+
+/*==============================
+    Blog CSS Start
+==============================*/
+
+.blog-sec {
+    position: relative;
+    background-attachment: fixed;
+    padding: 100px 0 170px;
+}
+
+.blog-sec::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+}
+
+.blog-sec .sec-title {
+    margin-bottom: -81px;
+}
+
+.blog-sec .h4-title {
+    margin-bottom: 17px;
+}
+
+.blog-img-wp {
+    overflow: hidden;
+}
+
+.blog-img {
+    height: 350px;
+    transition: var(--transition);
+}
+
+.blog-wp:hover .blog-img {
+    transform: scale(1.3);
+}
+
+.blog-content {
+    background-color: var(--white-color);
+    padding: 23px 30px 25px;
+}
+
+.blog-content .blog-top {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 27px;
+}
+
+.blog-content .h3-title {
+    color: var(--primary-color);
+}
+
+.blog-wp:hover .h3-title {
+    text-decoration: underline;
+}
+
+.blog-content .blog-top p {
+    color: var(--dark-color);
+}
+
+.post-metabar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-metabar i {
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+.blogSwiper {
+    padding-top: 76px;
+}
+
+.blogSwiper .swiper-button-prev {
+    left: auto;
+    right: 130px;
+}
+
+.blogSwiper .swiper-button-prev,
+.blogSwiper .swiper-button-next {
+    top: 0;
+    margin: auto;
+}
+
+.blog-wp:hover .blog-img-wp {
+    cursor: url('../images/cursor-crosshair-slider.svg'), pointer;
+}
+
+
+/*==============================
+    Blog CSS End
+==============================*/
+
+
+/*==============================
+    Client CSS Start
+==============================*/
+
+.client-sec {
+    position: relative;
+    margin-top: -70px;
+}
+
+.client-wp {
+    background-color: #f2f3f5;
+    box-shadow: var(--box-shadow);
+    padding: 30px 35px 28px;
+}
+
+.client-logo-box img {
+    width: 200px;
+    filter: brightness(0);
+    opacity: 0.5;
+    transition: var(--transition);
+}
+
+.client-logo-box img:hover {
+    filter: brightness(1);
+    opacity: 1;
+}
+
+
+/*==============================
+    Client CSS End
+==============================*/
+
+
+/*==============================
+    Contact Us CSS Start
+==============================*/
+
+.contact-us {
+    position: relative;
+    padding: 100px 0;
+}
+
+.quote-box-title {
+    margin-bottom: 20px;
+}
+
+.building-shep {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
+}
+
+.contact-box-content {
+    background-color: var(--body-color);
+}
+
+.contact-box-link {
+    background-color: var(--primary-color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.contact-box-link-content .link-box h3 {
+    font-size: 20px;
+    margin-bottom: 22px;
+}
+
+.contact-box-link-content .link-box .address {
+    display: flex;
+    align-items: center;
+}
+
+.contact-box-link-content .link-box i {
+    color: var(--white-color);
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.contact-box-link-content .link-box a {
+    display: flex;
+}
+
+.contact-box-link-content .link-box a.mail {
+    margin-bottom: 25px;
+}
+
+.contact-box-link-content li {
+    margin-bottom: 21px;
+}
+
+.contact-box-link-content li:last-child {
+    margin-bottom: 0;
+}
+
+.contact-box-link-content .link-box .link:hover {
+    text-decoration: underline;
+}
+
+.contact-box-title {
+    margin-bottom: 20px;
+}
+
+
+/*==============================
+    Contact Us CSS End
+==============================*/
+
+
+/*==============================
+    Footer CSS Start
+==============================*/
+
+.site-footer {
+    position: relative;
+    background-attachment: fixed;
+}
+
+.site-footer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+}
+
+.top-footer {
+    position: relative;
+    padding: 100px 0 0;
+}
+
+.footer-wp {
+    padding-bottom: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.top-footer .h3-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 45px;
+}
+
+.top-footer .h3-title::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: var(--white-color);
+    bottom: -20px;
+    left: 0;
+}
+
+.footer-content {
+    padding-right: 60px;
+}
+
+.news-letter-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 21px 30px 23px;
+    margin-bottom: 70px;
+}
+
+.news-letter-box .h2-title {
+    margin-bottom: 13px;
+}
+
+.news-letter-box .title-box p {
+    text-transform: capitalize;
+}
+
+.subscribe-form {
+    position: relative;
+    width: 500px;
+}
+
+.subscribe-form .form-input {
+    background-color: var(--white-color);
+    padding: 0 110px 0 30px;
+    border-color: var(--white-color);
+}
+
+.subscribe-form .form-input:valid {
+    border: 2px solid #008000;
+}
+
+.subscribe-form button {
+    position: absolute;
+    border: 0;
+    outline: none;
+    height: 42px;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 0 15px;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%);
+    transition: var(--transition);
+    z-index: 1;
+}
+
+.subscribe-form button:hover {
+    background-color: var(--primary-color);
+}
+
+.footer-logo {
+    margin-bottom: 18px;
+}
+
+
+.footer-text {
+    margin-bottom: 20px;
+}
+
+.footer-links li {
+    float: left;
+    width: 50%;
+    margin-bottom: 18px;
+}
+
+.footer-links li a {
+    color: var(--white-color);
+    transition: var(--transition);
+}
+
+.footer-links li a:hover {
+    color: var(--primary-color);
+}
+
+.post-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.post-box:last-child {
+    margin-bottom: 0;
+}
+
+.post-img-wp {
+    min-width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.post-img-wp .post-img {
+    width: 100%;
+    height: 100%;
+}
+
+.post-content .post-text a {
+    color: var(--white-color);
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+
+.post-content .post-text a:hover {
+    color: var(--primary-color);
+}
+
+.post-content .post-date {
+    margin-bottom: 11px;
+}
+
+.post-content .post-date i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.footer-post .h3-title {
+    margin-bottom: 50px;
+}
+
+.copyright-text a {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.copyright-text a:hover {
+    text-decoration: none;
+}
+
+.bottom-footer {
+    padding: 15px 0;
+}
+
+
+/*==============================
+    Footer CSS End
+==============================*/
+
+
+/*==============================
+    Scroll To Top CSS Start
+==============================*/
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--body-color);
+    display: none;
+    font-size: 25px;
+    color: var(--white-color);
+    transition: var(--transition);
+    z-index: 50;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    box-shadow: var(--common-box-shadow);
+}
+
+.scroll-to-top i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*==============================
+    Scroll To Top CSS End
+==============================*/
+
+
+/*==============================
+    Responsive Start
+==============================*/
+
+@media (min-width: 1500px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media(min-width: 2100px) {
+    .container {
+        max-width: 1400px;
+    }
+    p,
+    body,
+    button,
+    input,
+    select,
+    optgroup,
+    textarea {
+        font-size: 18px;
+        line-height: 32px;
+    }
+    .overflow-text {
+        height: 130px;
+    }
+    .testimonial-text .overflow-text {
+        height: 100px;
+    }
+    .counter-box {
+        padding: 41px 0 26px;
+    }
+    .counter-box .odometer::before {
+        top: -20px;
+    }
+    .project-content .h3-title {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+@media(max-width: 1499px) {
+    .about-img-1 {
+        border: 15px solid var(--white-color);
+    }
+    .about-img-2 {
+        top: -30px;
+        right: -30px;
+    }
+    .about-us-sec::after {
+        display: none;
+    }
+    .our-services .service-shep,
+    .core-features-sec .jcb-machine {
+        width: 330px;
+    }
+    .building-shep {
+        width: 300px;
+    }
+}
+
+@media(max-width: 1199px) {
+    .overflow-text {
+        padding-right: 15px;
+    }
+    .about-img-2 {
+        display: none;
+    }
+    .about-list.listbox li {
+        float: none;
+        width: 100%;
+    }
+    .service-box-wp {
+        padding: 0 15px 23px;
+    }
+    .project-content {
+        padding: 30px 15px 25px;
+    }
+    .pricing-item .pricing-text h3 {
+        font-size: 50px;
+    }
+    .subscribe-form {
+        width: 50%;
+    }
+}
+
+@media(max-width: 991px) {
+    .for-des {
+        display: none !important
+    }
+    .for-mob {
+        display: block !important
+    }
+    .scroll-to-top {
+        display: none !important;
+    }
+    .loading {
+        left: -120px;
+    }
+    .overflow-text {
+        height: auto;
+        padding: 0;
+    }
+    .site-header {
+        background-color: var(--dark-color);
+        height: 120px;
+        border-bottom: 5px solid var(--primary-color);
+        box-shadow: var(--box-shadow);
+        top: 0;
+    }
+    .header-wp {
+        background-color: #f5f3ef;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+    .site-header.sticky-head {
+        height: 120px;
+        background: var(--dark-color);
+        border-bottom: 3px solid var(--primary-color);
+    }
+    .sticky-head .header-wp {
+        padding: 0;
+    }
+    .site-header .container {
+        max-width: 100%;
+        padding: 0;
+        height: 100%;
+    }
+    .site-header .container .row {
+        margin: 0;
+        height: 100%;
+    }
+    .site-header .col-lg-3 {
+        position: absolute;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 0;
+        padding: 0;
+        z-index: 99;
+    }
+    .site-logo {
+        width: 100%;
+        transition: var(--transition);
+        height: auto;
+    }
+    .sticky-head .site-logo {
+        width: 100%;
+    }
+    .mob-phone {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        border: none;
+        outline: none !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        color: var(--primary-color);
+        transform: translate(0, -50%);
+        transition: .3s;
+        z-index: 98;
+    }
+    .mob-phone i {
+        transform: rotate(90deg);
+    }
+    .mob-phone:hover {
+        color: var(--white-color);
+    }
+    .menu-toggle {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        border: none;
+        outline: none !important;
+        background: transparent;
+        width: 50px;
+        height: 50px;
+        transform: translate(0, -50%);
+        transition: .3s;
+        z-index: 100;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: var(--primary-color);
+        margin-bottom: 8px;
+        transition: 0.3s;
+    }
+    .menu-toggle span:nth-child(2) {
+        width: 70%;
+        margin-left: 15px;
+    }
+    .menu-toggle span:last-child {
+        margin: 0;
+    }
+    .toggled .menu-toggle span:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 6px;
+    }
+    .toggled .menu-toggle span:nth-child(2) {
+        transform: rotate(-45deg);
+        margin: 0;
+        width: 100%;
+        position: relative;
+        top: -6px;
+    }
+    .toggled .menu-toggle span:nth-child(3) {
+        opacity: 0;
+        height: 0;
+    }
+    .toggled .menu-toggle span {
+        background: var(--white-color);
+    }
+    .toggled .header-menu {
+        transform: translatey(0);
+    }
+    .toggled .menu-toggle {
+        background: var(--dark-color);
+        padding: 5px;
+    }
+    .header-menu {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        padding-top: 10vh;
+        padding-left: 10vh;
+        transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        overflow-y: auto;
+        transform: translatey(-100%);
+        background-color: var(--primary-color);
+    }
+    .side-toggle-btn,
+    .main-navigation li::before,
+    .bannerSwiper .swiper-pagination-fraction {
+        display: none;
+    }
+    .site-header.sticky-head .main-navigation li a {
+        height: auto;
+    }
+    .main-navigation li {
+        height: auto;
+        display: block;
+        float: none;
+        margin: 0;
+        margin-bottom: 3vh;
+        padding: 0;
+    }
+    .main-navigation li a {
+        height: auto;
+        display: inline-block;
+        font-size: max(16px, 2vh);
+        color: var(--dark-color);
+        padding: 0;
+        transition: var(--transition);
+        border-bottom: 2px solid transparent;
+        text-align: left;
+    }
+    .main-navigation li:hover>a,
+    .sticky-head .main-navigation li:hover>a {
+        -webkit-text-stroke: 0;
+        color: var(--dark-color);
+    }
+    .sticky-head .main-navigation li a.active-menu,
+    .main-navigation li a.active-menu {
+        border-bottom-color: var(--dark-color);
+        color: var(--dark-color);
+        -webkit-text-stroke: 1px;
+    }
+    .h1-title {
+        font-size: 45px;
+        line-height: 55px;
+        margin-bottom: 21px;
+    }
+    .counter-sec,
+    .pricing-back-img,
+    .blog-sec,
+    .site-footer {
+        background-attachment: unset;
+    }
+    .about-us-sec::before,
+    .about-us-sec::after,
+    .our-services::before,
+    .core-features-sec::after,
+    .our-projects::after,
+    .our-team::after,
+    .testimonial-sec::before,
+    .testimonial-sec::after {
+        width: 15px;
+        height: 80px;
+    }
+    .about-us-sec {
+        padding: 70px 0;
+    }
+    .about-img-1 {
+        border: 0;
+        height: 350px;
+    }
+    .counter-sec {
+        padding: 60px 0 40px;
+    }
+    .our-services {
+        padding: 70px 0 0;
+        margin-bottom: -10px;
+    }
+    .service-box-wp {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 0 0 rgba(0, 0, 0, 0.12);
+        padding: 0 30px 23px;
+    }
+    .quote-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .quote-sec {
+        padding: 60px 0 70px;
+    }
+    .quote-content .quote-title {
+        margin-bottom: 26px;
+    }
+    .feature-content-wp {
+        margin: 0;
+        padding: 0;
+    }
+    .feature-img-wp,
+    .team-img {
+        height: 350px;
+    }
+    .service-box-wp .service-icon,
+    .feature-list li .icon {
+        border: 1px solid var(--primary-color);
+    }
+    .core-features-sec {
+        padding: 70px 0;
+    }
+    .feature-list {
+        margin-bottom: 30px;
+    }
+    .feature-single-img {
+        width: 100%;
+    }
+    .our-projects {
+        padding: 70px 0 40px;
+        background-attachment: unset;
+    }
+    .our-projects::before {
+        opacity: 0.9;
+    }
+    .project-content {
+        text-align: center;
+        padding: 30px 0 25px;
+    }
+    .project-content .h3-title {
+        display: block;
+    }
+    .project-box-wp .title {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+    }
+    .project-box-wp .h3-title {
+        color: var(--primary-color);
+        text-decoration: underline;
+    }
+    .project-content .project-location {
+        justify-content: center;
+    }
+    .our-team {
+        padding: 70px 0;
+    }
+    .team-content-wp {
+        position: relative;
+        background-color: var(--dark-color);
+        transform: translateY(0);
+        padding: 22px 0 30px;
+    }
+    .team-content-wp .social-team li a:hover {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+    }
+    .teamSwiper .swiper-wrapper {
+        padding: 0 0 76px;
+    }
+    .teamSwiper .swiper-slide-visible.swiper-slide-active:hover .team-box .team-img {
+        transform: scale(1);
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        margin: auto;
+        transform: translateY(0);
+        top: auto;
+        bottom: 0;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+    }
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        background-color: var(--dark-color);
+        color: var(--primary-color);
+    }
+    .swiper-button-next::after {
+        color: var(--white-color);
+    }
+    .swiper-button-next:hover::after {
+        color: var(--primary-color);
+    }
+    .swiper-button-prev,
+    .blogSwiper .swiper-button-prev {
+        left: 50%;
+        margin-left: -110px;
+    }
+    .swiper-button-next,
+    .blogSwiper .swiper-button-next {
+        right: 50%;
+        margin-right: -110px;
+    }
+    .pricing-sec {
+        padding: 70px 0 40px;
+    }
+    .pricing-item {
+        margin-bottom: 30px;
+    }
+    .pricing-item:hover {
+        transform: translateY(0);
+        box-shadow: unset;
+    }
+    .pricing-item .pricing-text h3 {
+        font-size: 45px;
+    }
+    .pricing-item .title-box {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+    .testimonialSwiper .swiper-wrapper {
+        padding-bottom: 71px;
+    }
+    .testimonial-sec {
+        padding: 0 0 70px;
+    }
+    .testimonial-text {
+        padding: 52px 20px 72px;
+    }
+    .testimonial-text .overflow-text {
+        padding-right: 15px;
+    }
+    .blogSwiper .swiper-button-prev,
+    .blogSwiper .swiper-button-next {
+        top: auto;
+        bottom: 0;
+    }
+    .blogSwiper {
+        padding-bottom: 76px;
+    }
+    .blog-sec {
+        padding: 70px 0 140px;
+    }
+    .client-wp {
+        padding: 30px 45px 28px;
+    }
+    .client-logo-box img {
+        filter: brightness(1);
+        opacity: 1;
+    }
+    .contact-us {
+        padding: 62px 0 70px;
+    }
+    .contact-box-content {
+        margin-bottom: 30px;
+    }
+    .contact-box-link {
+        height: auto;
+        padding: 25px 30px 23px;
+    }
+    .contact-box-link-content li {
+        margin-bottom: 28px;
+    }
+    .top-footer {
+        padding: 70px 0 0;
+    }
+    .news-letter-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 22px 30px 30px;
+        margin-bottom: 30px;
+    }
+    .news-letter-box .h2-title {
+        margin-bottom: 13px;
+    }
+    .news-letter-box .title-box {
+        margin-bottom: 21px;
+    }
+    .subscribe-form {
+        width: 100%;
+    }
+    .footer-content {
+        padding-right: 0;
+        margin-bottom: 25px;
+    }
+    .footer-wp {
+        padding-bottom: 30px;
+    }
+    .bottom-footer {
+        padding: 15px 0 20px;
+    }
+    .team-img-wp a:hover,
+    .testimonialSwiper:hover .testimonial-text,
+    .blog-wp:hover .blog-img-wp {
+        cursor: auto;
+    }
+}
+
+@media(max-width: 767px) {
+    .h2-title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .banner-text-wp {
+        padding: 20px 30px 30px;
+    }
+    .banner-text-wp p {
+        font-size: 20px;
+    }
+    .counter-box {
+        margin-block: 15px;
+    }
+    .counter-sec .sec-title {
+        margin-bottom: 6px;
+    }
+    .counter-sec {
+        padding: 60px 0 55px;
+    }
+    .client-wp {
+        padding: 30px 0 28px;
+    }
+    .subscribe-form button {
+        position: relative;
+        margin-top: 41px;
+    }
+    .subscribe-form button:hover {
+        background-color: var(--white-color);
+        color: var(--dark-color);
+    }
+    .subscribe-form .form-input {
+        padding: 0 30px;
+    }
+    .news-letter-box {
+        padding: 22px 30px 9px;
+    }
+
+}
+
+@media(max-width: 575px) {
+    .container,
+    .container-fluid {
+        padding: 0 30px;
+    }
+    .header-menu {
+        padding-left: 6vh;
+    }
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+    .menu-toggle span:nth-child(2) {
+        margin-left: 11px;
+    }
+    .h1-title {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 13px;
+    }
+    mark {
+        background-position: 0 35px;
+    }
+    .h4-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    .h4-title span {
+        font-size: 18px;
+        padding: 1px 0 1px 4px;
+    }
+    .h2-title {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 17px;
+    }
+    .h3-title {
+        font-size: 20px;
+    }
+    .banner-text-wp p {
+        font-size: 18px;
+    }
+    .about-us-sec::before,
+    .about-us-sec::after,
+    .our-services::before,
+    .core-features-sec::after,
+    .our-projects::after,
+    .our-team::after,
+    .testimonial-sec::before,
+    .testimonial-sec::after {
+        display: none;
+    }
+    .about-text h3 {
+        font-size: 18px;
+    }
+    .about-text h3 img {
+        width: 30px;
+        margin-right: 15px;
+    }
+    .about-us-sec {
+        padding: 37px 0 40px;
+    }
+    .about-text {
+        margin-bottom: 20px;
+    }
+    .about-box {
+        top: 0;
+        right: 0;
+    }
+    .about-box li span {
+        font-size: 24px;
+    }
+    .about-img-1,
+    .feature-img-wp,
+    .team-img,
+    .project-img,
+    .blog-img {
+        height: 300px;
+    }
+    .counter-sec {
+        padding: 31px 0 25px;
+    }
+    .counter-box .odometer {
+        font-size: 35px;
+    }
+    .counter-box p {
+        font-size: 18px;
+    }
+    .counter-box .odometer::before {
+        font-size: 19px;
+        width: 25px;
+        height: 25px;
+        right: -30px;
+    }
+    .counter-box {
+        padding: 12px 0 21px;
+    }
+    .counter-box-wp::before {
+        display: none;
+    }
+    .our-services {
+        padding: 37px 0 0;
+        margin-bottom: -34px;
+    }
+    .service-icon img {
+        width: 60px;
+    }
+    .service-text .h3-title {
+        margin-bottom: 15px;
+    }
+    .service-box-wp {
+        padding: 0 30px 20px;
+        margin-bottom: 74px;
+    }
+    .service-icon {
+        width: 90px;
+        height: 90px;
+        margin: -45px auto 23px;
+    }
+    .our-services .sec-title {
+        margin-bottom: 65px;
+    }
+    .quote-sec {
+        padding: 32px 0 40px;
+    }
+    .quote-title span {
+        font-size: 22px;
+        margin-bottom: 11px;
+    }
+    .quote-content .quote-title {
+        margin-bottom: 23px;
+    }
+    .core-features-sec {
+        padding: 37px 0 40px;
+    }
+    .feature-content-wp .h2-title {
+        margin-bottom: 21px;
+    }
+    .our-projects {
+        padding: 37px 0 10px;
+    }
+    .our-projects .h2-title {
+        margin-bottom: 21px;
+    }
+    .our-team {
+        padding: 37px 0 40px;
+    }
+    .pricing-sec {
+        padding: 37px 0 7px;
+    }
+    .pricing-sec .h2-title {
+        margin-bottom: 21px;
+    }
+    .pricing-switch li a {
+        height: 35px;
+    }
+    .pricing-item .title-box {
+        font-size: 18px;
+    }
+    .pricing-item .pricing-text h3 {
+        font-size: 35px;
+    }
+    .pricing-item .pricing-bottom-text li {
+        padding: 10px 30px 10px 50px;
+    }
+    .pricing-item .pricing-bottom-text li::before {
+        left: 15px;
+        width: 18px;
+        height: 18px;
+    }
+    .testimonial-author .img-box-wp {
+        width: 90px;
+        height: 90px;
+        padding: 5px;
+    }
+    .testimonial-author {
+        margin-top: -45px;
+    }
+    .testimonial-text {
+        padding: 52px 30px 64px;
+    }
+    .testimonial-sec {
+        padding: 0 0 40px;
+    }
+    .blog-sec {
+        padding: 37px 0 110px;
+    }
+    .blogSwiper {
+        padding-top: 86px;
+    }
+    .contact-us {
+        padding: 34px 0 40px;
+    }
+    .top-footer {
+        padding: 40px 0 0;
+    }
+}
+
+@media(max-width: 550px) {
+    .feature-list li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .feature-list li .icon {
+        margin: 0 0 23px;
+    }
+    .feature-list {
+        margin-bottom: 20px;
+    }
+    .blog-content .h3-title {
+        min-height: 60px;
+        margin-bottom: 13px;
+    }
+}
+
+@media(max-width: 400px) {
+    .container,
+    .container-fluid,
+    .form-input,
+    .subscribe-form .form-input {
+        padding: 0 15px;
+    }
+    .header-menu {
+        padding-left: 3vh;
+    }
+    select.form-input {
+        padding: 0 40px 0 15px;
+    }
+    .form-element i {
+        right: 15px;
+    }
+    textarea.form-input {
+        padding: 15px;
+        height: 100px;
+    }
+    .mob-phone {
+        left: 15px;
+    }
+    .menu-toggle {
+        right: 15px;
+    }
+    .h1-title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+    .h2-title {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .banner-text-wp {
+        padding: 20px 15px 30px;
+    }
+    .banner-text-wp::before,
+    .banner-text-wp::after {
+        width: 8px;
+        height: 50px;
+    }
+    .about-box li span {
+        font-size: 22px;
+    }
+    .about-img-1,
+    .feature-img-wp,
+    .team-img,
+    .project-img,
+    .blog-img {
+        height: 280px;
+    }
+    .about-text h3 {
+        margin-bottom: 17px;
+    }
+    .service-box-wp {
+        padding: 0 15px 20px;
+    }
+    .quote-title span {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+    .team-content h3 {
+        font-size: 22px;
+    }
+    .pricing-item .pricing-bottom-text ul {
+        padding: 0 15px;
+    }
+    .testimonial-text {
+        padding: 52px 15px 64px;
+    }
+    .blog-content {
+        padding: 23px 15px 25px;
+    }
+    .post-metabar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .post-metabar .post-author {
+        margin-bottom: 22px;
+    }
+    .building-shep {
+        display: none;
+    }
+    .contact-box-link {
+        padding: 25px 15px 23px;
+    }
+    .news-letter-box {
+        padding: 22px 15px 9px;
+    }
+    .subscribe-form {
+        width: 100%;
+    }
+}
+
+
+/*==============================
+    Responsive End
+==============================*/
